@@ -14,7 +14,6 @@ public class RouteLocatorConfig {
 	public RouteLocator myRoute(RouteLocatorBuilder builder) {
 
 		RouteLocator routeLocator = builder.routes().build();
-
 		return builder.routes()
 			.route("coupon-api",
 				p -> p.path("/api/coupons/**")
