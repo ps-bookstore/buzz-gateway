@@ -61,4 +61,4 @@ jobs:
           docker pull heldenar/book-gateway-api:latest
           docker stop gateway_api || true
           docker rm gateway_api || true
-          docker run -d --name gateway_api --network api_network  -p 8090:8090 heldenar/book-gateway-api:latest
+          docker run -d --name gateway_api --network api_network  -p 8080:8080 heldenar/book-gateway-api:latest
