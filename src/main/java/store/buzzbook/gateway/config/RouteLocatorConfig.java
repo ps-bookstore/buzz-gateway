@@ -17,11 +17,11 @@ public class RouteLocatorConfig {
 
 		return builder.routes()
 			.route("coupon-api",
-				p -> p.path("/api/coupons/**")
-					.uri("http://eureka-server:8091/"))
+				p -> p.path("/api/coupons/**").and()
+					.uri("lb://eureka-server:8091/"))
 			.route("core-api",
-				p -> p.path("/api/account/**")
-					.uri("http://eureka-server:8090/"))
+				p -> p.path("/api/account/**").and()
+					.uri("lb://core-api:8090/"))
 			.build();
 	}
 }
