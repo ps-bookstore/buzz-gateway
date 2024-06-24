@@ -8,16 +8,13 @@ logging:
 spring:
   application:
     name: spring-cloud-gateway-service
-
-eureka:
-  client:
-    register-with-eureka: true
-    fetch-registry: true
-    service-url:
-      defaultZone: http://admin:1234@eureka-server:8761/eureka
-  instance:
-    prefer-ip-address: true
-    instance-id: gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+  profiles:
+    active: dev
 
 management:
   endpoints:
