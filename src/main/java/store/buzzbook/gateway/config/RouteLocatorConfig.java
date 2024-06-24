@@ -20,7 +20,7 @@ public class RouteLocatorConfig {
 				p -> p.path("/api/coupons/**")
 					.uri("http://eureka-server:8091/"))
 			.route("core-api",
-				p -> p.path("/api/acount/**")
+				p -> p.path("/api/account/**")
 					.uri("http://eureka-server:8090/"))
 			.build();
 	}
