@@ -5,8 +5,6 @@ import org.springframework.cloud.gateway.route.builder.RouteLocatorBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import java.util.UUID;
-
 @Configuration
 public class RouteLocatorConfig {
 
@@ -22,6 +20,9 @@ public class RouteLocatorConfig {
 			.route("core-api",
 				p -> p.path("/api/account/**").and()
 					.uri("lb://core-api:8090/"))
+			.route("auth-api",
+				p -> p.path("/api/auth/**").and()
+					.uri("lb:/auth-api:8100/"))
 			.build();
 	}
 }
