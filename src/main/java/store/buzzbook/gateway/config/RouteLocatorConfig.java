@@ -22,7 +22,7 @@ public class RouteLocatorConfig {
 					.uri("lb://core-api:8090/"))
 			.route("auth-api",
 				p -> p.path("/api/auth/**").and()
-					.uri("lb:/auth-api:8100/"))
+					.uri("lb://auth-api:8100/"))
 			.build();
 	}
 }
