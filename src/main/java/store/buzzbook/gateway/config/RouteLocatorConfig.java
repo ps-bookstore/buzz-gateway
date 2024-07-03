@@ -16,7 +16,7 @@ public class RouteLocatorConfig {
 		return builder.routes()
 			.route("coupon-api",
 				p -> p.path("/api/coupons/**").and()
-					.uri("lb://eureka-server:8091/"))
+					.uri("lb://coupon-api:8091/"))
 			.route("core-api",
 				p -> p.path("/api/account/**").and()
 					.uri("lb://core-api:8090/"))
