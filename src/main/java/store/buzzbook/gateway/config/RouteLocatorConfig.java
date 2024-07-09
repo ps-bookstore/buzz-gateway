@@ -19,7 +19,7 @@ public class RouteLocatorConfig {
 					.uri("lb://coupon-api:8091/"))
 			.route("core-api",
 				p -> p.path("/api/account/**","/api/payments/**", "/api/products/**", "/api/orders/**","/api/cart/**","/api/tags/**",
-						"/api/productTags/**","/api/books/**")
+						"/api/productTags/**","/api/books/**","/api/categories/**","/api/image/**")
 					.and().uri("lb://core-api:8090/"))
 			.route("auth-api",
 				p -> p.path("/api/auth/**").and()
