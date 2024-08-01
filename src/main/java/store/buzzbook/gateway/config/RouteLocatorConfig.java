@@ -21,7 +21,7 @@ public class RouteLocatorConfig {
 				p -> p.path("/api/account/**", "/api/payments/**", "/api/products/**", "/api/orders/**", "/api/cart/**",
 						"/api/tags/**",
 						"/api/productTags/**", "/api/books/**", "/api/categories/**", "/api/image/**",
-						"/api/product-search/**", "/api/reviews/**", "/api/wishlist/**")
+						"/api/product-search/**", "/api/reviews/**", "/api/wishlist/**", "/api/oauth2/**")
 					.and().uri("lb://core-api:8090/"))
 			.route("auth-api",
 				p -> p.path("/api/auth/**").and()
