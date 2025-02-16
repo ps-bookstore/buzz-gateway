@@ -22,7 +22,7 @@ public class RouteLocatorConfig {
 						"/api/tags/**",
 						"/api/productTags/**", "/api/books/**", "/api/categories/**", "/api/image/**",
 						"/api/product-search/**", "/api/reviews/**", "/api/wishlist/**", "/api/oauth2/**")
-					.and().uri("lb://core-api:8090/"))
+					.and().uri("lb://core-api:7090/"))
 			.route("auth-api",
 				p -> p.path("/api/auth/**").and()
 					.uri("lb://auth-api:8100/"))
