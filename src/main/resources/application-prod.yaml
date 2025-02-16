@@ -10,7 +10,7 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone: http://${spring.security.user.name}:${spring.security.user.password}@eureka-server:8761/eureka
+      defaultZone: http://${spring.security.user.name}:${spring.security.user.password}@buzz-book.shop:8761/eureka
   instance:
     prefer-ip-address: true
-    instance-id: gateway
+    instance-id: spring-cloud-gateway-service
